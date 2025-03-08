@@ -1,4 +1,8 @@
 import "./Hero.scss";
+import githubLogo from "../../assets/github_logo.svg";
+import linkedInLogo from "../../assets/linkedin_logo.svg";
+import emailLogo from "../../assets/email_logo.svg";
+
 function Hero() {
   return (
     <div className="hero">
@@ -17,9 +21,24 @@ function Hero() {
         </p>
       </div>
       <div className="hero__contact">
-        <button>Send an email</button>
-        <button>LinkedIn</button>
-        <button>GitHub</button>
+        <a href="mailto:megan.veldhuis@gmail.com">
+          <button className="hero__button">
+            <img src={emailLogo} />
+            Send an email
+          </button>
+        </a>
+        <a>
+          <button className="hero__button">
+            <img src={linkedInLogo} />
+            LinkedIn
+          </button>
+        </a>
+        <a>
+          <button className="hero__button">
+            <img src={githubLogo} />
+            GitHub
+          </button>
+        </a>
       </div>
     </div>
   );
