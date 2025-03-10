@@ -6,10 +6,10 @@ import emailLogo from "../../assets/email_logo.svg";
 function Hero() {
   return (
     <div className="hero">
-      <div className="hero__text">
-        <p>Hey, I'm</p>
-        <h1>Megan Veldhuis</h1>
-        <p>
+      <div className="hero__top">
+        <p className="hero__text hero__over-title">Hey, I'm</p>
+        <h1 className="hero__text hero__name">Megan Veldhuis</h1>
+        <p className="hero__text hero__subtitle">
           I am an analytical, energetic, and detail-oriented electrical
           engineering graduate, with a stubborn determination for what I am
           passionate about. I have experience in leadership roles and work well
@@ -21,22 +21,25 @@ function Hero() {
         </p>
       </div>
       <div className="hero__contact">
-        <a href="mailto:megan.veldhuis@gmail.com">
+        <a href="mailto:megan.veldhuis@gmail.com" className="gradient-box">
           <button className="hero__button">
             <img src={emailLogo} />
-            Send an email
+            Send me an email
           </button>
         </a>
-        <a>
+        <a
+          href="https://www.linkedin.com/in/megan-veldhuis/"
+          className="gradient-box"
+        >
           <button className="hero__button">
             <img src={linkedInLogo} />
-            LinkedIn
+            Connect on LinkedIn
           </button>
         </a>
-        <a>
+        <a href="https://github.com/meganveldhuis" className="gradient-box">
           <button className="hero__button">
             <img src={githubLogo} />
-            GitHub
+            View my GitHub
           </button>
         </a>
       </div>

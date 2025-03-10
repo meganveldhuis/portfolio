@@ -1,13 +1,59 @@
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  &__top {
+    max-width: 35rem;
+  }
   &__text {
+    padding: 0.3rem 0;
+  }
+  &__over-title {
+  }
+  &__name {
+    font-size: 3rem;
+  }
+  &__subtitle {
   }
   &__contact {
     display: flex;
+    justify-content: space-around;
+    gap: 1rem;
   }
   &__button {
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 1rem;
+    background-color: black;
+  }
+}
+
+.gradient-box {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  box-sizing: border-box;
+
+  $border: 1px;
+  background-color: black;
+  border: solid $border transparent;
+  border-radius: 1rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -3px;
+    border-radius: inherit;
+    background: linear-gradient(to right, #d24074, #6518b4);
   }
 }

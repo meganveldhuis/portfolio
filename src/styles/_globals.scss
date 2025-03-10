@@ -1,3 +1,6 @@
+@use "./_typography" as *;
+@use "./_mixins" as *;
+@use "./_variables" as *;
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,33 +29,67 @@
   }
 }
 
+html {
+  box-sizing: border-box;
+  background-color: $color-background;
+  color: $color-text;
+}
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font: $font-family-primary;
+}
+body,
+textarea,
+* {
+  font-family: $font-family-primary;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  padding: 2px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.page-content {
+  margin: 1rem;
+  position: relative;
+  top: 1.5rem;
+  padding-bottom: 5rem;
+  @include tablet {
+    top: 0;
+  }
+  @include desktop {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+  }
+}
+
+.icon {
+  width: 1.5rem;
+}
 a {
   font-weight: 500;
-  text-decoration: no;
+  text-decoration: none;
 }
 a:hover {
   cursor: pointer;
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -65,4 +102,83 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+body,
+input,
+textarea,
+select,
+p {
+  font-size: 0.8rem;
+  font-weight: $font-weight-extra-light;
+}
+label,
+button {
+  font-size: 0.8rem;
+  font-weight: $font-weight-regular;
+}
+h1 {
+  font-size: 1.4rem;
+  font-weight: $font-weight-bold;
+}
+h2 {
+  font-size: 1.125rem;
+}
+h3 {
+  font-size: 0.7rem;
+}
+h4 {
+  font-size: 0.8rem;
+  font-weight: 200;
+  font-style: italic;
+}
+@include tablet {
+  body,
+  input,
+  textarea,
+  select,
+  label,
+  button,
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
+  }
+}
+@include desktop {
+  body,
+  input,
+  textarea,
+  select,
+  label,
+  button,
+  p {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 200;
+    font-style: italic;
+  }
 }
