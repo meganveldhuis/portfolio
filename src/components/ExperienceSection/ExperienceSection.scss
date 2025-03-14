@@ -1,0 +1,32 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.experience {
+  margin: 2rem 0;
+  &__header {
+  }
+  &__content {
+    display: flex;
+    gap: 0.4rem;
+  }
+  &__nav {
+    flex: 1;
+  }
+  &__job {
+    flex: 3;
+  }
+  &__option {
+    padding: 1rem;
+    cursor: pointer;
+    border-left: 4px solid rgba(grey, 0.1);
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    &--selected {
+      background-color: $color-nav-background;
+      border-left: 4px solid $color-nav-border;
+    }
+    &--volunteer {
+      color: $color-nav-volunteer;
+    }
+  }
+}

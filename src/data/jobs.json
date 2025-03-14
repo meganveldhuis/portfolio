@@ -1,0 +1,86 @@
+[
+  {
+    "id": 0,
+    "company": "Veldhuis Photography",
+    "positionTitle": "Photographer",
+    "start": 2018,
+    "end": null,
+    "location": "Edmonton, AB",
+    "tasks": ["task 1", "task 2"],
+    "isVolunteer": false
+  },
+  {
+    "id": 1,
+    "company": "Diversity in Engineering",
+    "positionTitle": "VP Communications",
+    "start": 2018,
+    "end": null,
+    "location": "Edmonton, AB",
+    "tasks": ["task 1", "task 2"],
+    "isVolunteer": true
+  },
+  {
+    "id": 2,
+    "company": "Engineering Students' Society",
+    "positionTitle": "VP Communications",
+    "start": "May 2023",
+    "end": "Apr 2024",
+    "location": "Edmonton, AB",
+    "tasks": [
+      "Elected to the executive team, representing and advocating for 5,000+ engineering students.",
+      "Led a team of 20 volunteers in projects, delegated tasks, and communicated with the rest of the executive team."
+    ],
+    "isVolunteer": true
+  },
+  {
+    "id": 3,
+    "company": "Western Management Consulting",
+    "positionTitle": "Data Analyst",
+    "start": "May 2020",
+    "end": "Dec 2021",
+    "location": "Edmonton, AB",
+    "tasks": [
+      "Utilized Power BI, PowerApps, and Microsoft Flow to model, design, manipulate, and visualize data.",
+      "Developed a database-integrated phone app to enhance company data interactions and understanding."
+    ],
+    "associatedPrograms": [],
+    "isVolunteer": false
+  },
+  {
+    "id": 4,
+    "company": "Breathe BioMedical",
+    "positionTitle": "Electrical Engineering Intern",
+    "start": "May 2023",
+    "end": "Dec 2023",
+    "location": "Moncton, NB",
+    "tasks": [
+      "Engineered a temperature and pressure monitoring enclosure, integrating RS-485 and MODBUS protocols with LabVIEW for accurate data acquisition and control.",
+      "Designed and constructed a Low-Drop-Off PCB for an ISO 13485 certified spectrometer using Altium Designer.",
+      "Reduced redundancies by updating the spectrometer’s wiring diagram (with 54 interconnected schemas) and commending design improvements",
+      "Independently automated and streamlined clinical sample tracking for over 90,000 samples, creating a consistent, normalized, and indexed database using Python, Dash, and MySQL."
+    ],
+    "associatedPrograms": [
+      "Altium Designer",
+      "Fusion360",
+      "SolidWorks Electrical",
+      "Python",
+      "MySQL",
+      "LabVIEW",
+      "GitLab"
+    ],
+    "isVolunteer": false
+  },
+  {
+    "id": 5,
+    "company": "Tetra Tech",
+    "positionTitle": "Engineer In Training",
+    "start": "Sept 2024",
+    "end": "Dec 2024",
+    "location": "Edmonton, AB",
+    "tasks": [
+      "Utilized advanced data collection equipment and techniques, including LiDAR and LCMS (Laser Crack Measurement System) to ensure high-quality data acquisition for various roadway projects. "
+    ],
+    "associatedPrograms": [""],
+    "isVolunteer": false
+  }
+]

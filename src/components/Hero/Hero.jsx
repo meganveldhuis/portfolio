@@ -1,7 +1,7 @@
 import "./Hero.scss";
-import githubLogo from "../../assets/github_logo.svg";
-import linkedInLogo from "../../assets/linkedin_logo.svg";
-import emailLogo from "../../assets/email_logo.svg";
+import githubLogo from "../../assets/logos/github_logo.svg";
+import linkedInLogo from "../../assets/logos/linkedin_logo.svg";
+import emailLogo from "../../assets/logos/email_logo.svg";
 
 function Hero() {
   return (

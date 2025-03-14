@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "institution": "University of Alberta",
+    "credit": "B.Sc. Electrical Engineering",
+    "assocciatedPrograms": [
+      "Vivado",
+      "FPGA",
+      "KiCad",
+      "LT Spice",
+      "C",
+      "C++",
+      "Embedded Programming on STM32 and ATMega microcontrollers",
+      "VHDL Hardware design"
+    ]
+  },
+  {
+    "id": 1,
+    "institution": "BrainStation",
+    "credit": "Diploma in Software Engineering",
+    "assocciatedPrograms": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Sass",
+      "Node.js",
+      "React",
+      "RESTful APIs",
+      "MySQL",
+      "Express",
+      "Knex"
+    ]
+  }
+]

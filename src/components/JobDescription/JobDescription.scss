@@ -1,0 +1,17 @@
+.job {
+  padding: 1rem;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__position {
+  }
+  &__location {
+  }
+  &__task-list {
+    list-style-type: disc;
+    padding-left: 2rem;
+  }
+  &__task {
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "title": "Reflow Oven Controller",
+    "position": "Firmware Engineer",
+    "description": "In a team of four, designed and implemented a reflow oven. Used C++ for a multi-threaded firmware to program a Xinc2 microcontroller, using SPI protocols and a PID controller. Sensed and displayed the temperature, humidity, and progress of reflow curve on an OLED. ",
+    "link": "www.github.com/reflowovencontroller",
+    "context": "University of Alberta Capstone",
+    "startDate": "Oct 2023",
+    "endDate": "Mar 2024"
+  },
+  {
+    "id": 1,
+    "title": "MoneyMinder",
+    "position": "FullStack Engineer",
+    "description": "",
+    "link": "www.github.com/moneyminder",
+    "context": "BrainStation Capstone",
+    "startDate": "Feb 2025",
+    "endDate": "Feb 2025"
+  },
+  {
+    "id": 2,
+    "title": "Cistercian Clock",
+    "position": "Firmware Engineer",
+    "description": "",
+    "link": "",
+    "context": "",
+    "startDate": "",
+    "endDate": ""
+  },
+  {
+    "id": 3,
+    "title": "Custom Macropad",
+    "position": "Hardware Engineer",
+    "description": "",
+    "link": "",
+    "context": "",
+    "startDate": "",
+    "endDate": ""
+  }
+]
