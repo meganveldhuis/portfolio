@@ -1,0 +1,17 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.navbar {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  &__left {
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  &__item {
+  }
+}
