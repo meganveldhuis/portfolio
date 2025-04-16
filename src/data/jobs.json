@@ -6,17 +6,23 @@
     "start": 2018,
     "end": null,
     "location": "Edmonton, AB",
-    "tasks": ["task 1", "task 2"],
+    "tasks": [
+      "Planned and prepared for on-location photoshoots, communicated with clients about their wants, and shot and edited photographs in a manner to maintain the brand, and satisfy clients.",
+      "Created, advertised, and maintained a brand while growing a client base."
+    ],
     "isVolunteer": false
   },
   {
     "id": 1,
     "company": "Diversity in Engineering",
-    "positionTitle": "VP Communications",
-    "start": 2018,
-    "end": null,
+    "positionTitle": "VP Outreach and Promotions",
+    "start": "Sept 2020",
+    "end": "Apr 2022",
     "location": "Edmonton, AB",
-    "tasks": ["task 1", "task 2"],
+    "tasks": [
+      "Responsible for the promotion and recruitment of the group, developed and shared creative media content across social media platforms, and created a detailed and professional website.",
+      "Organized, mentored, and supervised the social media team, set up regular tasks and activity for all social media outlets, and reported on social media activity regularly."
+    ],
     "isVolunteer": true
   },
   {
@@ -27,8 +33,8 @@
     "end": "Apr 2024",
     "location": "Edmonton, AB",
     "tasks": [
-      "Elected to the executive team, representing and advocating for 5,000+ engineering students.",
-      "Led a team of 20 volunteers in projects, delegated tasks, and communicated with the rest of the executive team."
+      "Elected to represent and advocate for nearly 5000 engineering students, while overseeing the five divisions of the Communications team.",
+      "Managed a team of 20+ volunteers on multiple projects. Regularly delegated tasks and tracked work with the executive team and ESS volunteers and encouraged student participation in events through multiple media streams."
     ],
     "isVolunteer": true
   },
@@ -76,11 +82,35 @@
     "positionTitle": "Engineer In Training",
     "start": "Sept 2024",
     "end": "Dec 2024",
+    "secondStart": "Mar 2025",
+    "secondEnd": null,
     "location": "Edmonton, AB",
     "tasks": [
-      "Utilized advanced data collection equipment and techniques, including LiDAR and LCMS (Laser Crack Measurement System) to ensure high-quality data acquisition for various roadway projects. "
+      "Utilized advanced data collection equipment and techniques, including LiDAR and LCMS (Laser Crack Measurement System) to ensure high-quality data acquisition for various roadway projects.",
+      "Developed a Python script for data quality assurance, validating Lidar-detected overhead lines against historical records to ensure accuracy."
     ],
-    "associatedPrograms": [""],
+    "associatedPrograms": ["Python"],
+    "isVolunteer": false
+  },
+  {
+    "id": 6,
+    "company": "HK Technologies",
+    "positionTitle": "Embedded Software Engineer",
+    "start": "Mar 2025",
+    "end": null,
+    "location": "Edmonton, AB",
+    "tasks": [
+      "Developed an embedded C++ application to host a React.js-based web portal on an RTOS, IoT microcontroller, integrating with an air suspension system to enhance accessibility and control.",
+      "Designed a modular HVAC integration library, enabling seamless interaction between thermostats, valves, pumps, and fan coils, incorporating sensor data for precise temperature regulation.",
+      "Developed a Wi-Fi-based mesh network for the HVAC system, allowing devices to communicate efficiently, enhancing scalability and robustness in temperature control systems."
+    ],
+    "associatedPrograms": [
+      "C++",
+      "Embedded Systems",
+      "PlatformIO",
+      "GitHub",
+      "RTOS"
+    ],
     "isVolunteer": false
   }
 ]

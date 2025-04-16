@@ -4,7 +4,9 @@ import jobs from "../../data/jobs.json";
 import JobDescription from "../JobDescription/JobDescription";
 
 function ExperienceSection() {
-  const [selectedCompanyID, setSelectedCompanyID] = useState(0);
+  const [selectedCompanyID, setSelectedCompanyID] = useState(
+    Math.max(...jobs.map((job) => job.id))
+  );
   const [screenWidth, setScreenWidth] = useState(screen.width);
 
   function handleCompanyClick(e) {
@@ -48,7 +50,7 @@ function ExperienceSection() {
           </select>
         ) : ( */}
         <nav className="experience__nav">
-          {jobs.map((job) => (
+          {[...jobs].reverse().map((job) => (
             <option
               className={`experience__option ${
                 selectedCompanyID == job.id
