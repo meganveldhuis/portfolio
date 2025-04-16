@@ -4,9 +4,11 @@ import jobs from "../../data/jobs.json";
 import JobDescription from "../JobDescription/JobDescription";
 
 function ExperienceSection() {
-  const [selectedCompanyID, setSelectedCompanyID] = useState(
-    Math.max(...jobs.map((job) => job.id))
+  const sortedJobs = [...jobs].sort(
+    (a, b) => new Date(b.start) - new Date(a.start)
   );
+
+  const [selectedCompanyID, setSelectedCompanyID] = useState(sortedJobs[0].id);
   const [screenWidth, setScreenWidth] = useState(screen.width);
 
   function handleCompanyClick(e) {
@@ -49,9 +51,9 @@ function ExperienceSection() {
             ))}
           </select>
         ) : ( */}
-        <nav className="experience__nav">
-          {[...jobs].reverse().map((job) => (
-            <option
+        <ul className="experience__nav">
+          {sortedJobs.map((job) => (
+            <li
               className={`experience__option ${
                 selectedCompanyID == job.id
                   ? "experience__option--selected"
@@ -62,13 +64,17 @@ function ExperienceSection() {
               key={job.id}
             >
               {job.company}
-            </option>
+            </li>
           ))}
-        </nav>
+        </ul>
         {/* )} */}
 
         <div className="experience__job">
-          <JobDescription selectedCompany={jobs[selectedCompanyID]} />
+          <JobDescription
+            selectedCompany={sortedJobs.find(
+              (job) => job.id == selectedCompanyID
+            )}
+          />
         </div>
       </div>
     </section>
