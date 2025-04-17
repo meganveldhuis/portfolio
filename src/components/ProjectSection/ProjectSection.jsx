@@ -7,7 +7,7 @@ function ProjectSection() {
       <h2>FEATURED PROJECTS</h2>
       <ul>
         {projects.map((project) => (
-          <ProjectTile project={project} />
+          <ProjectTile project={project} key={project.id} />
         ))}
       </ul>
     </section>

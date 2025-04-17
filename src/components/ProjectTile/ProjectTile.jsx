@@ -12,8 +12,10 @@ function ProjectTile({ project }) {
         {project.startDate} - {project.endDate}
       </p>
       <ul className="project__techstack">
-        {project.techStack.map((tech) => (
-          <li className="project__tech-item">{tech}</li>
+        {project.techStack.map((tech, index) => (
+          <li className="project__tech-item" key={index}>
+            {tech}
+          </li>
         ))}
       </ul>
     </li>
