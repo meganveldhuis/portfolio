@@ -1,0 +1,38 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+.hamburger {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  position: fixed;
+  padding-top: 10px;
+  margin-left: 10px;
+  z-index: 10;
+  &__burger {
+    width: 2rem;
+    height: 0.24rem;
+    border-radius: 10px;
+    background-color: white;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+  }
+  &__burger1--open {
+    transform: rotate(45deg);
+    background-color: black;
+  }
+  &__burger2--open {
+    transform: translateX(100%);
+    opacity: 0;
+    background-color: black;
+  }
+  &__burger3--open {
+    transform: rotate(-45deg) translateY(5px) translateX(-5px);
+    background-color: black;
+  }
+  @include tablet {
+    display: none;
+  }
+}

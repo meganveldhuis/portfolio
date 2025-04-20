@@ -3,7 +3,7 @@ import ProjectTile from "../ProjectTile/ProjectTile";
 
 function ProjectSection() {
   return (
-    <section>
+    <section id="projects">
       <h2>FEATURED PROJECTS</h2>
       <ul>
         {projects.map((project) => (
