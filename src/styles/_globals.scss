@@ -7,8 +7,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: $color-grey-background;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -61,7 +60,6 @@ button {
   }
 }
 .page-content {
-  margin: 1rem;
   position: relative;
   top: 1.5rem;
   padding-bottom: 5rem;
@@ -95,13 +93,6 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 body,

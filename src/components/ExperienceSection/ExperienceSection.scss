@@ -2,7 +2,8 @@
 @use "../../styles/variables" as *;
 
 .experience {
-  margin: 2rem 0;
+  padding: 2rem 1rem;
+  background-color: $color-black-background;
   &__header {
   }
   &__content {
