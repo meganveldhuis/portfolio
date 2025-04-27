@@ -2,7 +2,6 @@
 @use "../../styles/variables" as *;
 
 .navbar {
-  margin: 1rem;
   &--open {
     background-color: white;
     color: black;
@@ -11,44 +10,67 @@
     top: 0;
   }
   @include tablet {
+    margin: 1rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 4rem;
     position: static;
   }
-  &__left {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  &__logo {
+    font-size: 1.6rem;
+  }
+  &__mode {
+    visibility: hidden;
   }
   &__list {
     display: none;
     font-size: 1rem;
-    margin: 1.875rem 2rem;
-    padding: 0.625rem 0rem;
+    padding-bottom: 1rem;
     &--open {
       display: flex;
       flex-direction: column;
       width: 100vw;
     }
     @include tablet {
+      padding: 0 0.8rem;
+      flex-direction: row;
       display: flex;
-      flex-wrap: wrap;
       gap: 1rem;
       height: 100%;
     }
   }
   &__item {
     width: 100%;
-    &:hover {
-      background-color: rgba($color-dark-red, 0.4);
+    font-size: 1.3rem;
+    padding: 0.4rem 1.8rem;
+    &:hover,
+    & *:hover {
+      font-style: italic;
+      background-color: $color-nav-background-hover;
+      cursor: pointer;
     }
     &--selected {
-      background-color: rgba($color-dark-red, 0.15);
+      background-color: $color-nav-background;
+      color: white;
+      cursor: pointer;
       @include tablet {
         border-bottom: 6px solid $color-dark-rose;
       }
-      & * {
-        font-weight: bold;
-      }
+    }
+    @include tablet {
+      font-size: 1rem;
+      padding: 0.4rem 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
   }
 }

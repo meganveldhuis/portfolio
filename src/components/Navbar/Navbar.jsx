@@ -11,21 +11,29 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${hamburgerOpen ? "navbar--open" : ""}`}>
-      <div className="navbar__hamburger">
+      <div className="navbar__top">
         <Hamburger
           hamburgerOpen={hamburgerOpen}
           toggleHamburger={toggleHamburger}
         />
+        {hamburgerOpen ? (
+          <></>
+        ) : (
+          <>
+            <a className="navbar__logo" href="/">
+              MV.
+            </a>
+            <button className="navbar__mode">sun</button>
+          </>
+        )}
       </div>
-      <a className="navbar__left" href="/">
-        MV.
-      </a>
+
       <ul
         className={`navbar__list ${hamburgerOpen ? "navbar__list--open" : ""}`}
       >
         <li className="navbar__item">
           <a
-            className="navbar__item"
+            className="navbar__link"
             href="/#projects"
             onClick={() => setHamburgerOpen(false)}
           >
@@ -34,7 +42,7 @@ function Navbar() {
         </li>
         <li className="navbar__item">
           <a
-            className="navbar__item"
+            className="navbar__link"
             href="/Resume"
             onClick={() => setHamburgerOpen(false)}
           >
@@ -43,7 +51,7 @@ function Navbar() {
         </li>
         <li className="navbar__item">
           <a
-            className="navbar__item"
+            className="navbar__link"
             href="/#contact"
             onClick={() => setHamburgerOpen(false)}
           >
@@ -52,15 +60,12 @@ function Navbar() {
         </li>
         <li className="navbar__item">
           <a
-            className="navbar__item"
+            className="navbar__link"
             href="/#photography"
             onClick={() => setHamburgerOpen(false)}
           >
             Photography
           </a>
-        </li>
-        <li>
-          <button>sun</button>
         </li>
       </ul>
     </nav>

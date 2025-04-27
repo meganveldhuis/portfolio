@@ -2,14 +2,11 @@
 @use "../../styles/variables.scss" as *;
 .hamburger {
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
-  position: fixed;
-  padding-top: 10px;
-  margin-left: 10px;
   z-index: 10;
   &__burger {
     width: 2rem;
@@ -29,7 +26,7 @@
     background-color: black;
   }
   &__burger3--open {
-    transform: rotate(-45deg) translateY(5px) translateX(-5px);
+    transform: rotate(-45deg) translateY(2px) translateX(-2px);
     background-color: black;
   }
   @include tablet {
