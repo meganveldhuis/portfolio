@@ -25,6 +25,10 @@ function JobDescription({ selectedCompany }) {
           </li>
         ))}
       </ul>
+      {/* <div className="job__info">
+        <h4 className="job__title">Programs/Skills:</h4>
+        <ul>{}</ul>
+      </div> */}
     </article>
   );
 }

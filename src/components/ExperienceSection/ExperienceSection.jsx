@@ -9,7 +9,6 @@ function ExperienceSection() {
   );
 
   const [selectedCompanyID, setSelectedCompanyID] = useState(sortedJobs[0].id);
-  const [screenWidth, setScreenWidth] = useState(screen.width);
 
   function handleCompanyClick(e) {
     if (e.target.nodeName === "SELECT") {
@@ -19,38 +18,32 @@ function ExperienceSection() {
     }
   }
 
-  window.addEventListener("resize", () => {
-    setScreenWidth(screen.width);
-  });
-
   return (
     <section className="experience">
       <h2 className="experience__header">Work Experience</h2>
       <div className="experience__content">
-        {/* {screenWidth < 768 ? (
-          <select
-            className="experience__select"
-            id="selectJob"
-            name="selectJob"
-            value={selectedCompanyID}
-            onChange={handleCompanyClick}
-          >
-            {jobs.map((job) => (
-              <option
-                className={`experience__option ${
-                  selectedCompanyID == job.id
-                    ? "experience__option--selected"
-                    : ""
-                } ${job.isVolunteer ? "experience__option--volunteer" : ""}`}
-                id={job.id}
-                key={job.id}
-                value={job.id}
-              >
-                {job.company}
-              </option>
-            ))}
-          </select>
-        ) : ( */}
+        <select
+          className="experience__select"
+          id="selectJob"
+          name="selectJob"
+          value={selectedCompanyID}
+          onChange={handleCompanyClick}
+        >
+          {sortedJobs.map((job) => (
+            <option
+              className={`experience__option ${
+                selectedCompanyID == job.id
+                  ? "experience__option--selected"
+                  : ""
+              } ${job.isVolunteer ? "experience__option--volunteer" : ""}`}
+              id={job.id}
+              key={job.id}
+              value={job.id}
+            >
+              {job.company}
+            </option>
+          ))}
+        </select>
         <ul className="experience__nav">
           {sortedJobs.map((job) => (
             <li
@@ -67,7 +60,6 @@ function ExperienceSection() {
             </li>
           ))}
         </ul>
-        {/* )} */}
 
         <div className="experience__job">
           <JobDescription

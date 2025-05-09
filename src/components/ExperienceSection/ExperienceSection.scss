@@ -17,6 +17,10 @@
   &__nav {
     flex: 1;
     margin: 1rem 0;
+    display: none;
+    @include tablet {
+      display: block;
+    }
   }
   &__job {
     flex: 3;
@@ -33,6 +37,16 @@
     }
     &--volunteer {
       color: $color-nav-volunteer;
+    }
+  }
+  &__select {
+    margin: 1rem 0;
+    border: none;
+    @include tablet {
+      display: none;
+    }
+    &:focus {
+      border: none;
     }
   }
 }
