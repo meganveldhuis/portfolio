@@ -2,6 +2,7 @@
   {
     "id": 0,
     "title": "Reflow Oven Controller",
+    "img": "/images/reflowOven.png",
     "position": "Firmware Engineer",
     "description": "In a team of four, designed and implemented a reflow oven. Used C++ for a multi-threaded firmware to program a Xinc2 microcontroller, using SPI protocols and a PID controller. Sensed and displayed the temperature, humidity, and progress of reflow curve on an OLED. ",
     "link": "https://github.com/meganveldhuis/reflowovencontroller",
