@@ -3,6 +3,12 @@
 
 .project {
   width: 100%;
+  @include tablet {
+    width: 50%;
+  }
+  @include desktop {
+    width: 33%;
+  }
   &__img {
     width: 100%;
   }
