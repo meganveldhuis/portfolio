@@ -1,5 +1,4 @@
 import "./ProjectTile.scss";
-// import photo from "../../../public/images/reflowOven.png";
 
 function ProjectTile({ project }) {
   return (
@@ -7,9 +6,13 @@ function ProjectTile({ project }) {
       <img className="project__img" src={project.img} alt={project.img} />
       <h3 className="project__title">{project.title}</h3>
       <p className="project__context">{project.context}</p>
-      <p>
-        {project.startDate} - {project.endDate}
-      </p>
+      {project.startDate ? (
+        <p>
+          {project.startDate} - {project.endDate ? project.endDate : "present"}
+        </p>
+      ) : (
+        <></>
+      )}
       <p className="project__description">{project.description}</p>
       <ul className="project__techstack">
         {project.techStack.map((tech, index) => (
@@ -18,12 +21,16 @@ function ProjectTile({ project }) {
           </li>
         ))}
       </ul>
-      <a
-        href={project.link}
-        className="gradient-box gradient-box--blue project__button"
-      >
-        <button className="project__link">View Project on GitHub</button>
-      </a>
+      {project.link ? (
+        <a
+          href={project.link}
+          className="gradient-box gradient-box--blue project__button"
+        >
+          <button className="project__link">View Project on GitHub</button>
+        </a>
+      ) : (
+        <></>
+      )}
     </li>
   );
 }
