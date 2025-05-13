@@ -7,14 +7,16 @@ function JobDescription({ selectedCompany }) {
         <h3 className="job__position">{selectedCompany.positionTitle}</h3>
         <h4 className="job__date">
           {selectedCompany.secondStart
-            ? `${selectedCompany.start} - ${selectedCompany.end}, ${
-                selectedCompany.secondStart
-              } - ${
+            ? `${selectedCompany.start} - ${
+                selectedCompany.end ? selectedCompany.end : "present"
+              }, ${selectedCompany.secondStart} - ${
                 selectedCompany.secondEnd
                   ? selectedCompany.secondEnd
                   : "present"
               }`
-            : `${selectedCompany.start} - ${selectedCompany.end}`}
+            : `${selectedCompany.start} - ${
+                selectedCompany.end ? selectedCompany.end : "present"
+              }`}
         </h4>
       </div>
       <h4 className="job__location">{selectedCompany.location}</h4>
