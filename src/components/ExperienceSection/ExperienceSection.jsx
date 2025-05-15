@@ -20,7 +20,7 @@ function ExperienceSection() {
 
   return (
     <section className="experience">
-      <h2 className="experience__header">Work Experience</h2>
+      <h2 className="experience__header">WORK EXPERIENCE</h2>
       <div className="experience__content">
         <select
           className="experience__select"

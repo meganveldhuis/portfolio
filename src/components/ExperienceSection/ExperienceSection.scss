@@ -38,6 +38,10 @@
     &--volunteer {
       color: $color-nav-volunteer;
     }
+    &:hover {
+      background-color: rgba($color-nav-background, 0.4);
+      border-left: 4px solid rgba($color-nav-border, 0.4);
+    }
   }
   &__select {
     margin: 1rem 0;
