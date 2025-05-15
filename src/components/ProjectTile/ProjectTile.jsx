@@ -1,4 +1,5 @@
 import "./ProjectTile.scss";
+import linkImage from "../../assets/logos/link.svg";
 
 function ProjectTile({ project }) {
   return (
@@ -16,9 +17,12 @@ function ProjectTile({ project }) {
       <p className="project__description">{project.description}</p>
       <ul className="project__techstack">
         {project.techStack.map((tech, index) => (
-          <li className="project__tech-item" key={index}>
-            {tech}
-          </li>
+          <>
+            {index == 0 ? <></> : <li>-</li>}
+            <li className="project__tech-item" key={index}>
+              {tech}
+            </li>
+          </>
         ))}
       </ul>
       {project.link ? (
@@ -26,7 +30,10 @@ function ProjectTile({ project }) {
           href={project.link}
           className="gradient-box gradient-box--blue project__button"
         >
-          <button className="project__link">View Project on GitHub</button>
+          <button className="project__link">
+            <img src={linkImage} />
+            View Project on GitHub
+          </button>
         </a>
       ) : (
         <></>
