@@ -27,10 +27,20 @@ function JobDescription({ selectedCompany }) {
           </li>
         ))}
       </ul>
-      {/* <div className="job__info">
-        <h4 className="job__title">Programs/Skills:</h4>
-        <ul>{}</ul>
-      </div> */}
+      {selectedCompany.associatedPrograms ? (
+        <div className="job__info">
+          <h4 className="job__title">Programs/Skills:</h4>
+          <ul className="job__program-list">
+            {selectedCompany.associatedPrograms.map((program, index) => (
+              <li className="job__program">
+                <p>{program}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <></>
+      )}
     </article>
   );
 }

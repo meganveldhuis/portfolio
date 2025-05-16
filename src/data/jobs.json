@@ -10,7 +10,8 @@
       "Planned and prepared for on-location photoshoots, communicated with clients about their wants, and shot and edited photographs in a manner to maintain the brand, and satisfy clients.",
       "Created, advertised, and maintained a brand while growing a client base."
     ],
-    "isVolunteer": false
+    "isVolunteer": false,
+    "techstack": ["Lightroom", "Photoshop"]
   },
   {
     "id": 1,
@@ -49,8 +50,8 @@
       "Utilized Power BI, PowerApps, and Microsoft Flow to model, design, manipulate, and visualize data.",
       "Developed a database-integrated phone app to enhance company data interactions and understanding."
     ],
-    "associatedPrograms": [],
-    "isVolunteer": false
+    "isVolunteer": false,
+    "associatedPrograms": ["PowerBI", "PowerApps", "Microsoft Flow"]
   },
   {
     "id": 4,

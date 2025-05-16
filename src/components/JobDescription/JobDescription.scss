@@ -15,4 +15,18 @@
   }
   &__task {
   }
+  &__info {
+    margin-top: 1rem;
+  }
+  &__program-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  &__program {
+    color: gold;
+  }
+  &__logo {
+    width: 35px;
+  }
 }
