@@ -59,7 +59,7 @@ button {
     cursor: pointer;
   }
 }
-.page-content {
+.page {
   position: relative;
   top: 1.5rem;
   padding-bottom: 5rem;
@@ -71,6 +71,11 @@ button {
     margin: 0 auto;
     padding: 1rem 3rem;
   }
+}
+
+.page__content {
+  padding: 2rem 1rem;
+  background-color: $color-black-background;
 }
 
 .icon {

@@ -4,10 +4,12 @@ import ProjectSection from "../components/ProjectSection/ProjectSection";
 
 function HomePage() {
   return (
-    <div className="page-content">
+    <div className="page">
       <Hero />
-      <ExperienceSection />
-      <ProjectSection />
+      <div className="page__content">
+        <ExperienceSection />
+        <ProjectSection />
+      </div>
     </div>
   );
 }
