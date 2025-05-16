@@ -43,7 +43,7 @@ function Navbar() {
         <li className="navbar__item">
           <a
             className="navbar__link"
-            href="/Resume"
+            href="/#work"
             onClick={() => setHamburgerOpen(false)}
           >
             Resume

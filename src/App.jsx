@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/resume" element={<ResumePage />}></Route>
+        {/* <Route path="/resume" element={<ResumePage />}></Route> */}
       </Routes>
     </BrowserRouter>
   );
