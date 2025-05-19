@@ -23,17 +23,6 @@
     "techStack": ["JavaScript", "React", "MySQL", "Express", "Sass", "API"]
   },
   {
-    "id": 2,
-    "title": "Cistercian Clock",
-    "position": "Firmware Engineer",
-    "description": "",
-    "link": "",
-    "context": "Personal Project",
-    "startDate": "",
-    "endDate": "",
-    "techStack": ["ATMega328P", "C++", "PlatformIO"]
-  },
-  {
     "id": 3,
     "title": "Custom Macropad",
     "position": "Hardware Engineer",
