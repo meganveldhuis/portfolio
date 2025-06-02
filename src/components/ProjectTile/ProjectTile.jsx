@@ -17,12 +17,12 @@ function ProjectTile({ project }) {
       <p className="project__description">{project.description}</p>
       <ul className="project__techstack">
         {project.techStack.map((tech, index) => (
-          <>
+          <div key={index}>
             {index == 0 ? <></> : <li>-</li>}
             <li className="project__tech-item" key={index}>
               {tech}
             </li>
-          </>
+          </div>
         ))}
       </ul>
       {project.link ? (

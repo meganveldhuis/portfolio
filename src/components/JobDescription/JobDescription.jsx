@@ -32,7 +32,7 @@ function JobDescription({ selectedCompany }) {
           <h4 className="job__title">Programs/Skills:</h4>
           <ul className="job__program-list">
             {selectedCompany.associatedPrograms.map((program, index) => (
-              <li className="job__program">
+              <li className="job__program" key={index}>
                 <p>{program}</p>
               </li>
             ))}
