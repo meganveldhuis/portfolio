@@ -1,6 +1,28 @@
 [
   {
     "id": 0,
+    "title": "ClimaFi Smart HVAC System",
+    "position": "Hardware and Embedded Engineer",
+    "description": "Embedded C++ code, plus designed the second version of the HPC. used Wifi and custom IO Control libraries, and mesh network, and posting and reading data from Cloud Firestore using the FirebaseClient library. lvgl / TFT_eSPI for the captive touchscreen",
+    "link": "",
+    "context": "HK Technologies",
+    "startDate": "March 2025",
+    "endDate": "",
+    "techStack": ["C++", "EasyEDA"]
+  },
+  {
+    "id": 1,
+    "title": "ClimaFi App",
+    "position": "Software Engineer",
+    "description": "Developed a complex mobile application using Flutter that integrates directly with the Firestore Database and streams live data to the user",
+    "link": "",
+    "context": "HK Technologies",
+    "startDate": "March 2025",
+    "endDate": "",
+    "techStack": ["Flutter", "Firebase", "API"]
+  },
+  {
+    "id": 2,
     "title": "Reflow Oven Controller",
     "img": "/images/reflow-oven.jpeg",
     "position": "Firmware Engineer",
@@ -12,7 +34,7 @@
     "techStack": ["Xinc2", "C++"]
   },
   {
-    "id": 1,
+    "id": 3,
     "title": "MoneyMinder",
     "position": "FullStack Engineer",
     "description": "Budget and expense tracking app, using an Express.js backend connected to a MySQL server, RESTful APIs Gemini AI and Unsplash, and a responsive React.js frontend. Designed and developed in 10 days. ",
@@ -23,22 +45,11 @@
     "techStack": ["JavaScript", "React", "MySQL", "Express", "Sass", "API"]
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Custom Macropad",
     "position": "Hardware and Embedded Engineer",
     "description": "Designed a PCB for a custom macropad, complete with two rotary encoders, an OLED, and 16 keys.",
     "link": "https://github.com/meganveldhuis/mini_keeb",
-    "context": "Personal Project",
-    "startDate": "",
-    "endDate": "",
-    "techStack": ["ATMega32U4", "KiCad"]
-  },
-  {
-    "id": 4,
-    "title": "Cistercian clock",
-    "position": "Hardware Engineer",
-    "description": "Currently designing and prototyping a clock with custom LED arrays, ATMega328, shift registers, and a custom PCB based on the Cistercian numerical system.",
-    "link": "",
     "context": "Personal Project",
     "startDate": "",
     "endDate": "",

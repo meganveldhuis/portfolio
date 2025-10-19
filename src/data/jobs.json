@@ -101,16 +101,18 @@
     "end": null,
     "location": "Edmonton, AB",
     "tasks": [
-      "Developed an embedded C++ application to host a React.js-based web portal on an RTOS, IoT microcontroller, integrating with an air suspension system to enhance accessibility and control.",
-      "Designed a modular HVAC integration library, enabling seamless interaction between thermostats, valves, pumps, and fan coils, incorporating sensor data for precise temperature regulation.",
-      "Developed a Wi-Fi-based mesh network for the HVAC system, allowing devices to communicate efficiently, enhancing scalability and robustness in temperature control systems."
+      "Designed, developed, and tested embedded firmware for six ESP32-based controllers in a smart HVAC system, enabling heating and cooling control via I2C, MODBUS, and PWM protocols.",
+      "Led the development of a large-scale Flutter application using BLoC architecture and Cloud Firestore integration to monitor and update HVAC controller data (temperature, status, settings) in real time.",
+      "Designed, routed, and tested a high-power, 4-layer PCB featuring 24VAC, I2C, and MODBUS inputs, integrated touchscreen, multiple 110VAC relays, and a 10V PWM output; designed using EasyEDA. ",
+      "Developed a Wi-Fi mesh network to enable efficient device communication, improving scalability and reliability of smart HVAC systems."
     ],
     "associatedPrograms": [
       "C++",
       "Embedded Systems",
       "PlatformIO",
       "GitHub",
-      "RTOS"
+      "RTOS",
+      "BLE"
     ],
     "isVolunteer": false
   }
