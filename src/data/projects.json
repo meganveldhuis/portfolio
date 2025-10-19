@@ -25,6 +25,17 @@
   {
     "id": 3,
     "title": "Custom Macropad",
+    "position": "Hardware and Embedded Engineer",
+    "description": "Designed a PCB for a custom macropad, complete with two rotary encoders, an OLED, and 16 keys.",
+    "link": "https://github.com/meganveldhuis/mini_keeb",
+    "context": "Personal Project",
+    "startDate": "",
+    "endDate": "",
+    "techStack": ["ATMega32U4", "KiCad"]
+  },
+  {
+    "id": 4,
+    "title": "Cistercian clock",
     "position": "Hardware Engineer",
     "description": "Currently designing and prototyping a clock with custom LED arrays, ATMega328, shift registers, and a custom PCB based on the Cistercian numerical system.",
     "link": "",
