@@ -1,31 +1,56 @@
 [
   {
     "id": 0,
-    "title": "ClimaFi Smart HVAC System",
-    "position": "Hardware and Embedded Engineer",
-    "description": "Embedded C++ code, plus designed the second version of the HPC. used Wifi and custom IO Control libraries, and mesh network, and posting and reading data from Cloud Firestore using the FirebaseClient library. lvgl / TFT_eSPI for the captive touchscreen",
+    "title": "Offgassing Oven",
+    "position": "Hardware Engineer",
+    "bio": "Built a temperature and pressure control circuit with a PID Controller, an RTD, solid state relay, and an AC/DC Converter.",
+    "description": "Built a temperature and pressure control circuit with a PID Controller, an RTD, solid state relay, and an AC/DC Converter. This project started as a small, one-day project to regulate the temperature of a cylinder and clean U-Cups, but turned into a bigger project that could be used often. In the second iteration, I added a control box and a fuse to isolate the wires and improve safety. In the third iteration, I used LABView to control the temperature and PID parameters via MODBUS and RS485 communication protocols. Kicad was used to manage wiring schematics, and I maintained a BOM and documenation throughout the project.",
     "link": "",
-    "context": "HK Technologies",
-    "startDate": "March 2025",
+    "context": "Project at BBM",
+    "startDate": "",
     "endDate": "",
+    "img": "/images/breathe-oven/box-view.jpg",
+    "photos": [
+      "/images/breathe-oven/lab-box.jpg",
+      "/images/breathe-oven/schematic.png"
+    ],
     "techStack": [
-      "C++",
-      "EasyEDA"
+      "Altium Designer"
+    ],
+    "challenges": [
+      "LABView is a visual coding language so it was fun and tricky to learn a new way to interpret code."
     ]
   },
   {
     "id": 1,
-    "title": "ClimaFi App",
-    "position": "Software Engineer",
-    "description": "Developed a complex mobile application using Flutter that integrates directly with the Firestore Database and streams live data to the user",
+    "title": "ClimaFi Smart Heat Pump Controller",
+    "position": "Firmware, Hardware, Software Engineer",
+    "bio": "A smart HVAC System with Flutter app-controlled configuration and Supabase integration. The Heat Pump Controller connects to the database, has a control system, is automatically updated via OTA, and communicates to a commercial heatpump via Modbus. Embedded C++ code, plus designed the second version of the HPC. used Wifi and custom IO Control libraries, and mesh network, and posting and reading data from Cloud Firestore using the FirebaseClient library. lvgl / TFT_eSPI for the captive touchscreen",
+    "description": "One of the biggest projects I am working on at HK Technologies. The system is a smart HVAC Control System for buildings, currently developing the Heat Pump Controller (HPC) for production, with more smart controllers in development. The HPC has 24VAC power inputs, nine 120VAC tolerant switch relays, a PWM output, a touch-screen, and two ports used for Modbus communication to a commercial heatpump. I wore a few hats for this project. As a hardware engineer, I redesigned, routed, and chose parts for the newer version of the PCB using EasyEDA, then tested each component with an oscilloscope, multimeter, and mock Modbus device. As a firmware engineer, I wrote code to control the components, connect to WiFi, display settings and current states, and connect to the Supabase database to pull configuration changes and post data synchronously. I used Object Oriented Programming combined with I2C, I2S, RS485 Modbus, and USB to control the inputs and outputs in this project. As a software engineer, I developed a complex mobile application using Flutter and BLoC architecture that integrates directly with the Supabase Database and streams live data to the user.",
     "link": "",
-    "context": "HK Technologies",
-    "startDate": "March 2025",
+    "context": "Project at HK Tech",
+    "startDate": "",
     "endDate": "",
+    "img": "/images/hk-climafi/physical-board.jpg",
+    "photos": [
+      "/images/hk-climafi/pcblayout.png",
+      "/images/hk-climafi/app_screenshot1.PNG",
+      "/images/hk-climafi/app_screenshot3.PNG"
+    ],
     "techStack": [
+      "EasyEDA",
+      "C++",
+      "ESP32",
       "Flutter",
-      "Firebase",
-      "API"
+      "IOT",
+      "I2C",
+      "I2S",
+      "Modbus"
+    ],
+    "challenges": [
+      "Developing in a fast-paced environment for the development of a product-level project",
+      "Without a physical heatpump, I wrote a mock device based on the datasheet of the heatpump in order to test the modbus worked. This was challenging because the datasheet wasn't very clear.",
+      "Heap needed to be a constant consideration on this project, as tasks like posting temperature data to the database or the OTAs required a lot of processing power"
     ]
   },
   {
@@ -125,60 +150,6 @@
     "challenges": [
       "This was my first PCB Design, so getting used to the new software and strict hardware considerations was the biggest challenge for this project.",
       "These boards arrived at the office on my last week, so I worked hard to finish soldering one to test it before my term ended."
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Offgassing Oven",
-    "position": "Hardware Engineer",
-    "bio": "Built a temperature and pressure control circuit with a PID Controller, an RTD, solid state relay, and an AC/DC Converter.",
-    "description": "Built a temperature and pressure control circuit with a PID Controller, an RTD, solid state relay, and an AC/DC Converter. This project started as a small, one-day project to regulate the temperature of a cylinder and clean U-Cups, but turned into a bigger project that could be used often. In the second iteration, I added a control box and a fuse to isolate the wires and improve safety. In the third iteration, I used LABView to control the temperature and PID parameters via MODBUS and RS485 communication protocols. Kicad was used to manage wiring schematics, and I maintained a BOM and documenation throughout the project.",
-    "link": "",
-    "context": "Project at BBM",
-    "startDate": "",
-    "endDate": "",
-    "img": "/images/breathe-oven/box-view.jpg",
-    "photos": [
-      "/images/breathe-oven/lab-box.jpg",
-      "/images/breathe-oven/schematic.png"
-    ],
-    "techStack": [
-      "Altium Designer"
-    ],
-    "challenges": [
-      "LABView is a visual coding language so it was fun and tricky to learn a new way to interpret code."
-    ]
-  },
-  {
-    "id": 6,
-    "title": "ClimaFi Smart Heat Pump Controller",
-    "position": "Firmware, Hardware, Software Engineer",
-    "bio": "A smart HVAC System with Flutter app-controlled configuration and Supabase integration. The Heat Pump Controller connects to the database, has a control system, is automatically updated via OTA, and communicates to a commercial heatpump via Modbus.",
-    "description": "One of the biggest projects I am working on at HK Technologies. The system is a smart HVAC Control System for buildings, currently developing the Heat Pump Controller (HPC) for production, with more smart controllers in development. The HPC has 24VAC power inputs, nine 120VAC tolerant switch relays, a PWM output, a touch-screen, and two ports used for Modbus communication to a commercial heatpump. I wore a few hats for this project. As a hardware engineer, I redesigned, routed, and chose parts for the newer version of the PCB using EasyEDA, then tested each component with an oscilloscope, multimeter, and mock Modbus device. As a firmware engineer, I wrote code to control the components, connect to WiFi, display settings and current states, and connect to the Supabase database to pull configuration changes and post data synchronously. I used Object Oriented Programming combined with I2C, I2S, RS485 Modbus, and USB to control the inputs and outputs in this project. As a software engineer,I wrote a Flutter mobile app for users to control and monitor their Heat Pump Controller. The app uses BLoC architecture, and authenticates and connects with Supabase to read and write data and communicate with the device.",
-    "link": "",
-    "context": "Project at HK Tech",
-    "startDate": "",
-    "endDate": "",
-    "img": "/images/hk-climafi/physical-board.jpg",
-    "photos": [
-      "/images/hk-climafi/pcblayout.png",
-      "/images/hk-climafi/app_screenshot1.PNG",
-      "/images/hk-climafi/app_screenshot3.PNG"
-    ],
-    "techStack": [
-      "EasyEDA",
-      "C++",
-      "ESP32",
-      "Flutter",
-      "IOT",
-      "I2C",
-      "I2S",
-      "Modbus"
-    ],
-    "challenges": [
-      "Developing in a fast-paced environment for the development of a product-level project",
-      "Without a physical heatpump, I wrote a mock device based on the datasheet of the heatpump in order to test the modbus worked. This was challenging because the datasheet wasn't very clear.",
-      "Heap needed to be a constant consideration on this project, as tasks like posting temperature data to the database or the OTAs required a lot of processing power"
     ]
   }
 ]
