@@ -19,13 +19,24 @@ function Hero() {
         <h1 className="hero__text hero__name anim-text-flow">{animatedName}</h1>
         <p className="hero__text hero__subtitle">
           I am an analytical, energetic, and detail-oriented{" "}
-          <span>electrical engineering</span> graduate, with a stubborn
-          determination for what I am passionate about. I have experience in{" "}
+          <span>electrical engineering</span> graduate, with determination and
+          passion for electronic projects. I have experience in{" "}
           <span className="hero__subtitle">leadership</span> roles and work well
           on teams, demonstrated by being an executive in{" "}
-          <span className="hero__subtitle">Engineering Students' Society</span>{" "}
-          and <span className="hero__subtitle">Diversity in Engineering</span>.
-          Being on the DivE team for most of my degree, I have learned how
+          <a
+            className="hero__subtitle--link"
+            href="https://www.essualberta.ca/"
+          >
+            Engineering Students' Society
+          </a>{" "}
+          and{" "}
+          <a
+            className="hero__subtitle--link"
+            href="https://www.diversityineng.ca/"
+          >
+            Diversity in Engineering
+          </a>
+          . Being on the DivE team for most of my degree, I have learned how
           essential diversity is for every team. I am{" "}
           <span>perceptive, attentive</span>, and{" "}
           <span>driven to meet deadlines</span> and to{" "}

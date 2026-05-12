@@ -112,7 +112,7 @@
     "tasks": [
       "Designed, routed, and tested a high-power, 4-layer PCB featuring 24VAC, I2C, and MODBUS inputs, integrated touchscreen, multiple 110VAC relays, and a 10V PWM output; designed using EasyEDA.",
       "Redesigned and optimized ESP32‑based PCBs across multiple projects, including a low‑power ceremonial bugle with dual TAS‑series amplifiers, integrated Li‑ion charging, battery‑level sensing, power‑latch management, and SDIO micro‑SD input for audio playback.",
-      "Designed, developed, and tested embedded firmware for six ESP32-based controllers in a smart HVAC system, enabling heating and cooling control via BLE, I2C, MODBUS, and PWM protocols.",
+      "Designed, developed, and tested embedded firmware for a heat pump controller, enabling heating and cooling control using BLE, I2C, MODBUS, and I2S protocols. Handled OTA updates and used FreeRTOS tasks to monitor heap consumption on multiple threads",
       "Led the development of a large-scale Flutter application using BLoC architecture and Supabase integration to monitor and update HVAC controller data (temperature, status, settings) in real time."
     ],
     "associatedPrograms": [
