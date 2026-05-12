@@ -84,6 +84,11 @@
       font-weight: 400;
       border-left: none;
     }
+    &--link {
+      // hero__subtitle--link
+      font-style: italic;
+      color: $rose;
+    }
   }
 
   &__contact {

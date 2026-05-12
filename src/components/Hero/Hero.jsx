@@ -33,8 +33,14 @@ function Hero() {
         </p>
         <p className="hero__text hero__subtitle">
           Outside of work, you can find me in the mountains, hiking, rock
-          climbing, or taking photos. I also enjoy concert photography, playing
-          ringette, and crocheting.
+          climbing, or taking photos. I also enjoy{" "}
+          <a
+            className="hero__subtitle--link"
+            href="https://www.instagram.com/veldhuisphotography/"
+          >
+            concert photography
+          </a>
+          , playing ringette, and crocheting.
         </p>
       </div>
       <div className="hero__contact">
