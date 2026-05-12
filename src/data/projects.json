@@ -2,35 +2,162 @@
   {
     "id": 0,
     "title": "Reflow Oven Controller",
-    "img": "/images/reflow-oven.jpeg",
+    "img": "/images/reflow/reflow-oven.jpeg",
+    "photos": [
+      "/images/reflow/block-diagram.png",
+      "/images/reflow/ui-diagram.png",
+      "/images/reflow/cases.png",
+      "/images/reflow/pcblayout.png",
+      "/images/reflow/pcbrender.png",
+      "/images/reflow/performance_curve.png"
+    ],
     "position": "Firmware Engineer",
-    "description": "In a team of four, designed and implemented a reflow oven. Used C++ for a multi-threaded firmware to program a Xinc2 microcontroller, using SPI protocols and a PID controller. Sensed and displayed the temperature, humidity, and progress of reflow curve on an OLED. ",
+    "bio": "Redesigned an old toaster oven into a fully functional, multi-profile reflow oven.",
+    "description": "This was our capstone project to end the electrical engineering degree. In a team of four, we designed and implemented a reflow oven. We used C++ for a multi-threaded firmware to program a Xinc2 microcontroller, using SPI protocols and a PID controller. The reflow oven sensed and displayed the temperature, humidity, and progress of reflow curve on an OLED. We set out to provide a few different reflow profile options based on the solder used. More in depth explanation can be found on GitHub.",
     "link": "https://github.com/meganveldhuis/reflowovencontroller",
     "context": "University of Alberta Capstone",
     "startDate": "Oct 2023",
     "endDate": "Mar 2024",
-    "techStack": ["Xinc2", "C++"]
+    "techStack": [
+      "Xinc2",
+      "C++",
+      "SPI"
+    ],
+    "challenges": [
+      "Tuning the PID controller to maintain a precise reflow temperature curve without overshoot — small parameter changes had significant effects on solder quality.",
+      "Coordinating multi-threaded firmware tasks (temperature control, display updates, user input) on a resource-constrained microcontroller without race conditions. Using the XinC2 Microcontroller was part of our project constraints set by the client"
+    ]
   },
   {
     "id": 1,
     "title": "MoneyMinder",
     "position": "FullStack Engineer",
-    "description": "Budget and expense tracking app, using an Express.js backend connected to a MySQL server, RESTful APIs Gemini AI and Unsplash, and a responsive React.js frontend. Designed and developed in 10 days. ",
+    "bio": "Budget and expense tracking app, using an Express.js backend connected to a MySQL server, RESTful APIs Gemini AI and Unsplash, and a responsive React.js frontend.",
+    "description": "Budget and expense tracking app, using an Express.js backend connected to a MySQL server, RESTful APIs Gemini AI and Unsplash, and a responsive React.js frontend. Designed and developed in 10 days for the Brainstation course. I took the course to learn some new skills and new tech stack, so it was nice to see it all come together quickly.",
     "link": "https://github.com/meganveldhuis/moneyminder-client",
     "context": "BrainStation Capstone",
     "startDate": "Feb 2025",
     "endDate": "Feb 2025",
-    "techStack": ["JavaScript", "React", "MySQL", "Express", "Sass", "API"]
+    "techStack": [
+      "JavaScript",
+      "React",
+      "MySQL",
+      "Express",
+      "Sass",
+      "API"
+    ],
+    "challenges": [
+      "Delivering a polished, full-stack product in 10 days required prioritization. Scoping the project early and resisting feature creep was the hardest design decision.",
+      "UI Design is not something that comes naturally to me, so the design phase took the most time.",
+      "Designing a database schema that could flexibly support budget categories, recurring transactions, and user accounts from day one saved significant refactoring time later."
+    ]
   },
   {
     "id": 3,
     "title": "Custom Macropad",
-    "position": "Hardware Engineer",
-    "description": "Currently designing and prototyping a clock with custom LED arrays, ATMega328, shift registers, and a custom PCB based on the Cistercian numerical system.",
+    "position": "Hardware, Firmware Engineer",
+    "bio": "Designed and hand-soldered a custom macropad for my computer",
+    "description": "Designed and hand-soldered a custom macropad for my computer. I added a small OLED, 16 programmable switches, and two rotary encoders. ",
     "link": "",
     "context": "Personal Project",
     "startDate": "",
     "endDate": "",
-    "techStack": ["ATMega32U4", "KiCad"]
+    "img": "/images/macropad/pcblayout.png",
+    "photos": [
+      "/images/macropad/pcblayout.png",
+      "/images/macropad/schematic.png"
+    ],
+    "techStack": [
+      "KiCad",
+      "ATMega32U4"
+    ],
+    "challenges": [
+      "Finding time for this project between work was difficult, but what I spent the most time on was soldering the PCB. I quickly learned how important it is to design with development and debugging in mind."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "LDO PCB Design",
+    "position": "Hardware Engineer",
+    "bio": "Designed and hand-soldered a Low Drop-Off PCB that taks a 15V input and outputs either 9V or 12V into the company's Spectrometer.",
+    "description": "Designed and hand-soldered a Low Drop-Off PCB that taks a 15V input and outputs either 9V or 12V into the company's Spectrometer. Designed to be DIN-rail mountable to fit inside the spectrometer's table, and reduced noise.",
+    "link": "",
+    "context": "Project at BBM",
+    "startDate": "",
+    "endDate": "",
+    "img": "/images/breathe/pcbrender.png",
+    "photos": [
+      "/images/breathe/pcblayout.png",
+      "/images/breathe/schematic.png"
+    ],
+    "techStack": [
+      "Altium Designer"
+    ],
+    "challenges": [
+      "This was my first PCB Design, so getting used to the new software and strict hardware considerations was the biggest challenge for this project.",
+      "These boards arrived at the office on my last week, so I worked hard to finish soldering one to test it before my term ended."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Offgassing Oven",
+    "position": "Hardware Engineer",
+    "bio": "Built a temperature and pressure control circuit with a PID Controller, an RTD, solid state relay, and an AC/DC Converter.",
+    "description": "Built a temperature and pressure control circuit with a PID Controller, an RTD, solid state relay, and an AC/DC Converter. This project started as a small, one-day project to regulate the temperature of a cylinder and clean U-Cups, but turned into a bigger project that could be used often. In the second iteration, I added a control box and a fuse to isolate the wires and improve safety. In the third iteration, I used LABView to control the temperature and PID parameters via MODBUS and RS485 communication protocols. Kicad was used to manage wiring schematics, and I maintained a BOM and documenation throughout the project.",
+    "link": "",
+    "context": "Project at BBM",
+    "startDate": "",
+    "endDate": "",
+    "img": "/images/breathe-oven/box-view.jpg",
+    "photos": [
+      "/images/breathe-oven/lab-box.jpg",
+      "/images/breathe-oven/schematic.png"
+    ],
+    "techStack": [
+      "Altium Designer"
+    ],
+    "challenges": [
+      "LABView is a visual coding language so it was fun and tricky to learn a new way to interpret code."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "ClimaFi Smart HVAC System",
+    "position": "Firmware, Hardware, Software Engineer",
+    "bio": "",
+    "description": ".",
+    "link": "",
+    "context": "Project at HK Tech",
+    "startDate": "",
+    "endDate": "",
+    "techStack": [
+      "EasyEDA",
+      "C++",
+      "ESP32",
+      "Flutter"
+    ],
+    "challenges": [
+      "Fast-paced development of a product-level project"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Black Cat ",
+    "position": "Firmware, Hardware, Software Engineer",
+    "bio": "",
+    "description": ".",
+    "link": "",
+    "context": "Project at HK Tech",
+    "startDate": "",
+    "endDate": "",
+    "techStack": [
+      "EasyEDA",
+      "C++",
+      "ESP32",
+      "Flutter"
+    ],
+    "challenges": [
+      "Fast-paced development of a product-level project"
+    ]
   }
 ]

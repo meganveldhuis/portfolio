@@ -1,32 +1,119 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
 .job {
-  padding: 1rem;
+  padding: 1.75rem 1.5rem;
+  animation: job-in 0.25s ease both;
+
+  @include tablet {
+    padding: 2rem 2.5rem;
+  }
+
+  @keyframes job-in {
+    from {
+      opacity: 0;
+      transform: translateX(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   &__header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.4rem;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
   }
+
   &__position {
-    font-size: 2rem;
+    font-family: "Amaranth", serif;
+    font-weight: normal;
+    color: white;
+    line-height: 1.1;
   }
+
+  &__date {
+    font-family: "RobotoCondensed", monospace;
+    letter-spacing: 0.1em;
+    color: $muted;
+    font-style: normal;
+    white-space: nowrap;
+  }
+
   &__location {
+    font-family: "RobotoCondensed", monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $rose;
+    font-style: normal;
+    margin-bottom: 1.25rem;
   }
+
   &__task-list {
-    list-style-type: disc;
-    padding-left: 2rem;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid $border;
   }
+
   &__task {
+    line-height: 1.75;
+    color: rgba(white, 0.7);
+    font-weight: 200;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid $border;
+    padding-left: 1rem;
+    position: relative;
+
+    &::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: rgba($rose, 0.6);
+    }
   }
+
   &__info {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
+
+  &__title {
+    font-family: "RobotoCondensed", monospace;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $rose;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
   &__program-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 6px;
   }
+
   &__program {
-    color: gold;
-  }
-  &__logo {
-    width: 35px;
+    font-family: "RobotoCondensed", monospace;
+    letter-spacing: 0.07em;
+    color: rgba(white, 0.55);
+    border: 1px solid $border;
+    border-radius: 20px;
+    padding: 3px 10px;
+
+    p {
+      color: inherit;
+    }
   }
 }

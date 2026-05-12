@@ -6,7 +6,7 @@ import emailLogo from "../../assets/logos/email_logo.svg";
 function Hero() {
   const name = "Megan Veldhuis";
 
-  // Split the name into individual characters and wrap each in a span
+  // Split name into individual characters and wrap each in a span
   const animatedName = name
     .split("")
     .map((char, index) => (

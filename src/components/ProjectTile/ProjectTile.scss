@@ -1,50 +1,153 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/variables" as *;
 
-.project {
+.project-tile {
   width: 100%;
-  padding: 1rem;
+  cursor: pointer;
+  border: 1px solid $border;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(white, 0.02);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
   @include tablet {
     width: calc(50% - 1rem);
   }
+
   @include desktop {
-    width: 33%;
+    width: calc(33.333% - 1rem);
   }
-  &__img {
-    width: 100%;
-    border-radius: 5%;
+
+  &:hover {
+    background-color: rgba(white, 0.045);
+    border-color: rgba(white, 0.22);
+    transform: translateY(-2px);
   }
-  &__title {
+
+  &:focus-visible {
+    outline: 2px solid $rose;
+    outline-offset: 2px;
+  }
+}
+
+.project-tile__accent {
+  height: 8px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.project-tile__img-wrap {
+  width: 100%;
+  overflow: hidden;
+  // max-height: 180px;
+  border-bottom: 1px solid $border;
+}
+
+.project-tile__img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(50%);
+  transition:
+    filter 0.35s ease,
+    transform 0.35s ease;
+
+  .project-tile:hover & {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+  }
+}
+
+.project-tile__body {
+  flex: 1;
+  padding: 1.2rem 1.25rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.project-tile__context {
+  font-family: "RobotoCondensed", monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+
+  &--school {
+    color: #9fd8ff;
+  }
+  &--personal {
+    color: $rose;
+  }
+  &--work {
+    color: #76c759;
+  }
+}
+
+.project-tile__title {
+  font-family: "Amaranth", serif;
+  font-size: 1.2rem;
+  color: white;
+  margin: 0;
+  line-height: 1.1;
+  @include tablet {
     font-size: 2rem;
   }
-  &__context {
-    font-style: italic;
-  }
-  &__description {
-  }
-  &__techstack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  &__tech-item {
-    color: $color-light-blue;
-  }
-  &__button {
-    margin: 1rem;
-    width: 50%;
-  }
-  &__link {
-    width: 100%;
-    padding: 0.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1rem;
-    &:hover {
-      transition: all 0.2s ease-in-out;
-      filter: invert(100%);
-    }
+}
+
+.project-tile__date {
+  font-family: "RobotoCondensed", monospace;
+  color: $muted;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.project-tile__description {
+  line-height: 1.7;
+  color: rgba(white, 0.65);
+  font-weight: 200;
+  margin: 0.25rem 0 0;
+}
+
+.project-tile__techstack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.6rem;
+}
+
+.project-tile__tech-item {
+  font-family: "RobotoCondensed", monospace;
+  letter-spacing: 0.07em;
+  color: rgba(white, 0.55);
+  border: 1px solid $border;
+  border-radius: 20px;
+  padding: 2px 9px;
+}
+
+.project-tile__footer {
+  padding: 0.75rem 1.25rem 1rem;
+  border-top: 1px solid $border;
+  margin-top: auto;
+}
+
+.project-tile__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "RobotoCondensed", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $muted;
+  transition: color 0.2s;
+
+  .project-tile:hover & {
+    color: white;
   }
 }

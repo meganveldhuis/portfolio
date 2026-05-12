@@ -52,13 +52,13 @@ function Navbar() {
         <li className="navbar__item">
           <a
             className="navbar__link"
-            href="/#contact"
+            href="/contact"
             onClick={() => setHamburgerOpen(false)}
           >
             Contact
           </a>
         </li>
-        <li className="navbar__item">
+        {/* <li className="navbar__item">
           <a
             className="navbar__link"
             href="/#photography"
@@ -66,7 +66,7 @@ function Navbar() {
           >
             Photography
           </a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

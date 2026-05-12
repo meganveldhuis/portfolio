@@ -1,0 +1,451 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+@use "sass:color";
+
+// ─── Page shell ────────────────────────────────────────────────────────────
+.contact-page {
+  min-height: calc(100vh - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  animation: contact-in 0.4s ease both;
+
+  @keyframes contact-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @include tablet {
+    min-height: calc(100vh - 4rem);
+  }
+}
+
+// ─── Hero strip ────────────────────────────────────────────────────────────
+.contact-page__hero {
+  position: relative;
+  padding: 3.5rem 1.5rem 2.5rem;
+  border-bottom: 1px solid $border;
+  overflow: hidden;
+
+  // Subtle grid texture (same as hero)
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(white, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(white, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  @include tablet {
+    padding: 4.5rem 3rem 3rem;
+  }
+}
+
+.contact-page__overline {
+  font-family: "RobotoCondensed", monospace;
+  // font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $rose;
+  margin-bottom: 1rem;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-page__title {
+  font-family: "Amaranth", serif;
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  font-weight: normal;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: white;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+
+  em {
+    font-style: italic;
+    color: $rose;
+  }
+}
+
+.contact-page__subtitle {
+  // font-size: 0.95rem;
+  line-height: 1.8;
+  color: $muted;
+  font-weight: 200;
+  max-width: 48ch;
+  position: relative;
+  z-index: 1;
+}
+
+// Decorative star
+.contact-page__deco {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  font-size: clamp(4rem, 14vw, 10rem);
+  color: rgba($rose, 0.12);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  animation: deco-spin 30s linear infinite;
+
+  @keyframes deco-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// ─── Body grid ─────────────────────────────────────────────────────────────
+.contact-page__body {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex: 1;
+
+  @include tablet {
+    grid-template-columns: 420px 1fr;
+    border-bottom: 1px solid $border;
+  }
+
+  @include desktop {
+    grid-template-columns: 480px 1fr;
+  }
+}
+
+// ─── Photo column ──────────────────────────────────────────────────────────
+.contact-page__photo-col {
+  border-bottom: 1px solid $border;
+  padding: 2.5rem 1.5rem;
+
+  @include tablet {
+    border-bottom: none;
+    border-right: 1px solid $border;
+    padding: 3rem;
+  }
+}
+
+.contact-page__photo-wrap {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid $border;
+  background-color: rgba(white, 0.03);
+  aspect-ratio: 4 / 5;
+  max-width: 380px;
+
+  @include tablet {
+    max-width: none;
+    height: 100%;
+    max-height: 520px;
+    aspect-ratio: unset;
+  }
+}
+
+.contact-page__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(15%);
+  transition: filter 0.5s ease;
+
+  .contact-page__photo-wrap:hover & {
+    filter: grayscale(0%);
+  }
+}
+
+.contact-page__photo-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(white, 0.02),
+    rgba(white, 0.02) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+
+  span {
+    font-family: "RobotoCondensed", monospace;
+    // font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $muted;
+    border: 1px dashed rgba(white, 0.2);
+    padding: 0.6rem 1rem;
+    border-radius: 2px;
+  }
+}
+
+// Availability pill
+.contact-page__availability {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba($color-background, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid $border;
+  border-radius: 20px;
+  padding: 5px 12px 5px 8px;
+  font-family: "RobotoCondensed", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(white, 0.7);
+}
+
+.contact-page__availability-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #5dcaa5;
+  flex-shrink: 0;
+  animation: pulse 2.5s ease-in-out infinite;
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.55;
+      transform: scale(0.8);
+    }
+  }
+}
+
+// ─── Info column ───────────────────────────────────────────────────────────
+.contact-page__info-col {
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  @include tablet {
+    padding: 3rem 3.5rem;
+  }
+}
+
+.contact-page__name {
+  font-family: "Amaranth", serif;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: normal;
+  color: white;
+  letter-spacing: -0.01em;
+}
+
+// ─── Info rows ─────────────────────────────────────────────────────────────
+.contact-page__info-rows {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.contact-page__info-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid $border;
+  transition: background-color 0.15s;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &--static {
+    cursor: default;
+  }
+
+  &--link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(white, 0.04);
+
+      .contact-page__info-arrow {
+        color: $rose;
+        transform: translate(2px, -2px);
+      }
+
+      .contact-page__info-value {
+        color: white;
+      }
+    }
+  }
+}
+
+.contact-page__info-icon {
+  color: $rose;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-page__info-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.contact-page__info-label {
+  font-family: "RobotoCondensed", monospace;
+  // font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $muted;
+}
+
+.contact-page__info-value {
+  // font-size: 0.9rem;
+  color: rgba(white, 0.85);
+  font-weight: 200;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.15s;
+
+  @include tablet {
+    // font-size: 1rem;
+  }
+}
+
+.contact-page__info-arrow {
+  color: $muted;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+// ─── CTA buttons ───────────────────────────────────────────────────────────
+.contact-page__ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.contact-page__cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  background-color: $rose;
+  color: white;
+  border-radius: 3px;
+  font-family: "RobotoCondensed", monospace;
+  // font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    transform 0.15s;
+
+  &:hover {
+    background-color: color.adjust($rose, $lightness: 8%);
+    transform: translateY(-1px);
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.contact-page__cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  background-color: transparent;
+  color: rgba(white, 0.7);
+  border: 1px solid $border;
+  border-radius: 3px;
+  font-family: "RobotoCondensed", monospace;
+  // font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.15s;
+
+  &:hover {
+    border-color: rgba(white, 0.3);
+    color: white;
+    transform: translateY(-1px);
+  }
+}
+
+// ─── Marquee ───────────────────────────────────────────────────────────────
+.contact-page__marquee-wrap {
+  border-top: 1px solid $border;
+  overflow: hidden;
+  padding: 0.9rem 0;
+  background: rgba(white, 0.015);
+}
+
+.contact-page__marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+  gap: 0;
+
+  span {
+    font-family: "RobotoCondensed", monospace;
+    // font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $muted;
+    padding-right: 2rem;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}

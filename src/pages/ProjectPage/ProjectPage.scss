@@ -1,0 +1,425 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+// ─── Page shell ────────────────────────────────────────────────────────────
+.project-page {
+  min-height: 100vh;
+  background-color: $color-background;
+  color: $color-text;
+  font-family: $font-body;
+  padding-bottom: 6rem;
+  animation: page-in 0.45s ease both;
+
+  @keyframes page-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &--not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 4rem 2rem;
+  }
+}
+
+// ─── Header bar ────────────────────────────────────────────────────────────
+.project-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid $border;
+  position: sticky;
+  top: 0;
+  background-color: rgba($color-background, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+
+  @include tablet {
+    padding: 1.25rem 3rem;
+  }
+}
+
+.project-page__back {
+  font-family: $font-body;
+  color: $muted;
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  padding: 0;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.project-page__context-badge {
+  font-family: $font-mono;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid $border;
+
+  &--school {
+    color: #9fd8ff;
+    border-color: rgba(#9fd8ff, 0.3);
+    background: rgba(#9fd8ff, 0.06);
+  }
+  &--personal {
+    color: $rose;
+    border-color: $rose-border;
+    background: $rose-light;
+  }
+  &--work {
+    color: #76c759;
+    border-color: rgba(#76c759, 0.3);
+    background: rgba(#76c759, 0.06);
+  }
+}
+
+// ─── Hero section ──────────────────────────────────────────────────────────
+.project-page__hero {
+  position: relative;
+  padding: 3rem 1.5rem 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 4rem 3rem 3rem;
+  }
+}
+
+.project-page__hero-text {
+  max-width: 700px;
+  z-index: 1;
+}
+
+.project-page__overline {
+  font-family: $font-mono;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $muted;
+  margin-bottom: 0.75rem;
+}
+
+.project-page__title {
+  font-family: $font-display;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: $color-text;
+  margin: 0 0 1rem;
+
+  // Rose underline on last word effect
+  span {
+    color: $rose;
+  }
+}
+
+.project-page__date {
+  font-family: $font-mono;
+  color: $muted;
+  letter-spacing: 0.06em;
+}
+
+// Large decorative index number
+.project-page__index-num {
+  font-family: $font-display;
+  color: rgba(white, 0.04);
+  line-height: 1;
+  position: absolute;
+  right: -0.5rem;
+  bottom: -0.5rem;
+  user-select: none;
+  pointer-events: none;
+
+  @include tablet {
+    right: 2rem;
+  }
+}
+
+// ─── Hero image ────────────────────────────────────────────────────────────
+.project-page__img-wrap {
+  position: relative;
+  margin: 0 1.5rem 2rem;
+  max-width: 52rem;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid $border;
+
+  @include tablet {
+    margin: 0 auto 3rem;
+  }
+
+  // Rose tint overlay on hover
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 60%,
+      rgba($color-background, 0.7)
+    );
+    pointer-events: none;
+  }
+}
+
+.project-page__img {
+  width: 100%;
+  // height: clamp(220px, 34vw, 420px);
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter 0.4s ease;
+
+  .project-page__img-wrap:hover & {
+    filter: grayscale(0%);
+  }
+}
+
+.project-page__img-caption {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: $font-mono;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(white, 0.6);
+  z-index: 1;
+}
+
+.project-page__carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(white, 0.2);
+  background-color: rgba($color-background, 0.55);
+  color: rgba(white, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  z-index: 2;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background-color: rgba($color-background, 0.8);
+    border-color: rgba(white, 0.4);
+    color: white;
+  }
+
+  &--prev {
+    left: 0.75rem;
+  }
+
+  &--next {
+    right: 0.75rem;
+  }
+}
+
+.project-page__carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0.8rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.45rem;
+  z-index: 2;
+}
+
+.project-page__carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(white, 0.5);
+  background-color: transparent;
+
+  &--active {
+    background-color: white;
+    border-color: white;
+  }
+}
+
+// ─── Body grid ─────────────────────────────────────────────────────────────
+.project-page__body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 1.5rem;
+  border-top: 1px solid $border;
+  padding-top: 2.5rem;
+  margin-top: 0.5rem;
+
+  @include tablet {
+    grid-template-columns: 1fr 280px;
+    padding: 2.5rem 3rem 0;
+    gap: 4rem;
+  }
+}
+
+.project-page__col {
+  &--side {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include tablet {
+      border-left: 1px solid $border;
+      padding-left: 2.5rem;
+    }
+  }
+}
+
+// ─── Section label ─────────────────────────────────────────────────────────
+.project-page__section-label {
+  font-family: $font-mono;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $rose;
+  margin: 0 0 1rem;
+  font-weight: normal;
+}
+
+// ─── Description ───────────────────────────────────────────────────────────
+.project-page__description {
+  line-height: 1.85;
+  color: rgba(white, 0.8);
+  font-weight: 200;
+  max-width: 120ch;
+}
+
+// ─── CTA link ──────────────────────────────────────────────────────────────
+.project-page__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  font-family: $font-mono;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-text;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $rose;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+
+  &:hover {
+    color: $rose;
+  }
+}
+
+// ─── Tech list ─────────────────────────────────────────────────────────────
+.project-page__tech-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.project-page__tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: $font-mono;
+  color: rgba(white, 0.75);
+  letter-spacing: 0.04em;
+}
+
+.project-page__tech-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $rose;
+  flex-shrink: 0;
+}
+
+// ─── Side block ────────────────────────────────────────────────────────────
+// .project-page__side-block {
+//   // spacing handled by parent gap
+// }
+
+.project-page__side-value {
+  color: rgba(white, 0.75);
+  font-style: italic;
+}
+
+// ─── Challenges & learnings ────────────────────────────────────────────────
+.project-page__challenges {
+  margin: 3rem 0 0;
+  padding: 2.5rem 1.5rem;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  background: rgba(white, 0.02);
+
+  @include tablet {
+    padding: 3rem;
+  }
+}
+
+.project-page__challenges-inner {
+  max-width: 900px;
+}
+
+.project-page__challenge-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-page__challenge-item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  p {
+    line-height: 1.8;
+    color: rgba(white, 0.75);
+    font-weight: 200;
+    margin: 0;
+  }
+}
+
+.project-page__challenge-num {
+  font-family: $font-display;
+  color: rgba($rose, 0.5);
+  line-height: 1;
+}
+
+// ─── Footer ────────────────────────────────────────────────────────────────
+.project-page__footer {
+  padding: 2rem 1.5rem 0;
+  @include tablet {
+    padding: 2rem 3rem 0;
+  }
+}
