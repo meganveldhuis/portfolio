@@ -50,13 +50,13 @@ function Navbar() {
           </a>
         </li>
         <li className="navbar__item">
-          <a
+          <Link
             className="navbar__link"
-            href="/contact"
+            to="/contact"
             onClick={() => setHamburgerOpen(false)}
           >
             Contact
-          </a>
+          </Link>
         </li>
         {/* <li className="navbar__item">
           <a
