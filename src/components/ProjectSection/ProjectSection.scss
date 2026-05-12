@@ -2,16 +2,27 @@
 @use "../../styles/variables" as *;
 
 .projects {
-  border-top: 1px solid white;
-  &__header {
-    margin: 1rem;
-    text-align: center;
+  border-top: 1px solid $border;
+  padding: 3rem 1.5rem;
+
+  @include tablet {
+    padding: 4rem 3rem;
   }
+
+  &__header {
+    font-family: "RobotoCondensed", monospace;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $rose;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
   &__list {
     display: flex;
-    justify-content: space-around;
-    // align-items: flex-end;
     flex-wrap: wrap;
-    gap: 0.1rem;
+    gap: 1rem;
+    align-items: stretch;
   }
 }

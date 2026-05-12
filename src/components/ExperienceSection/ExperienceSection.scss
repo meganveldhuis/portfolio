@@ -2,53 +2,108 @@
 @use "../../styles/variables" as *;
 
 .experience {
-  &__header {
+  padding: 3rem 1.5rem;
+
+  @include tablet {
+    padding: 4rem 3rem;
   }
+
+  &__header {
+    font-family: "RobotoCondensed", monospace;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $rose;
+    font-weight: normal;
+    margin-bottom: 2rem;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0;
+
     @include tablet {
       flex-direction: row;
+      gap: 0;
+      border: 1px solid $border;
+      border-radius: 4px;
+      overflow: hidden;
     }
   }
+
   &__nav {
-    flex: 1;
-    margin: 1rem 0;
+    flex: 0 0 200px;
     display: none;
+    border-right: 1px solid $border;
+
     @include tablet {
       display: block;
     }
+
+    @include desktop {
+      flex: 0 0 230px;
+    }
   }
+
   &__job {
-    flex: 3;
+    flex: 1;
+    min-width: 0;
   }
+
   &__option {
-    padding: 1rem;
+    padding: 0.9rem 1.25rem;
     cursor: pointer;
-    border-left: 4px solid rgba(grey, 0.1);
-    transition: ease-in-out;
-    transition-duration: 0.3s;
+    border-left: 2px solid transparent;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    color: $muted;
+    transition:
+      background-color 0.15s,
+      border-color 0.15s,
+      color 0.15s;
+
     &--selected {
-      background-color: $color-nav-background;
-      border-left: 4px solid $color-nav-border;
+      border-left-color: $rose;
+      background-color: rgba(white, 0.04);
+      color: white;
+      font-weight: 400;
     }
+
     &--volunteer {
-      color: $color-nav-volunteer;
+      color: #5dcaa5;
+
+      &.experience__option--selected {
+        color: #9fe1cb;
+      }
     }
-    &:hover {
-      background-color: rgba($color-nav-background, 0.4);
-      border-left: 4px solid rgba($color-nav-border, 0.4);
+
+    &:hover:not(&--selected) {
+      background-color: rgba(white, 0.025);
+      border-left-color: rgba(white, 0.2);
+      color: rgba(white, 0.75);
     }
   }
+
   &__select {
-    margin: 1rem 0;
-    border: none;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 0.75rem;
+    background-color: rgba(white, 0.04);
+    border: 1px solid $border;
+    border-radius: 4px;
+    color: white;
+    font-family: "RobotoCondensed", monospace;
+    letter-spacing: 0.06em;
+    appearance: none;
+    cursor: pointer;
+
     @include tablet {
       display: none;
     }
+
     &:focus {
-      border: none;
+      outline: none;
+      border-color: rgba($rose, 0.5);
     }
   }
 }

@@ -6,7 +6,7 @@ import emailLogo from "../../assets/logos/email_logo.svg";
 function Hero() {
   const name = "Megan Veldhuis";
 
-  // Split the name into individual characters and wrap each in a span
+  // Split name into individual characters and wrap each in a span
   const animatedName = name
     .split("")
     .map((char, index) => (
@@ -30,6 +30,11 @@ function Hero() {
           <span>perceptive, attentive</span>, and{" "}
           <span>driven to meet deadlines</span> and to{" "}
           <span>produce high-quality work</span>.
+        </p>
+        <p className="hero__text hero__subtitle">
+          Outside of work, you can find me in the mountains, hiking, rock
+          climbing, or taking photos. I also enjoy concert photography, playing
+          ringette, and crocheting.
         </p>
       </div>
       <div className="hero__contact">

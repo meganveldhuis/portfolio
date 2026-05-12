@@ -11,7 +11,10 @@
       "Created, advertised, and maintained a brand while growing a client base."
     ],
     "isVolunteer": false,
-    "techstack": ["Lightroom", "Photoshop"]
+    "techstack": [
+      "Lightroom",
+      "Photoshop"
+    ]
   },
   {
     "id": 1,
@@ -51,7 +54,11 @@
       "Developed a database-integrated phone app to enhance company data interactions and understanding."
     ],
     "isVolunteer": false,
-    "associatedPrograms": ["PowerBI", "PowerApps", "Microsoft Flow"]
+    "associatedPrograms": [
+      "PowerBI",
+      "PowerApps",
+      "Microsoft Flow"
+    ]
   },
   {
     "id": 4,
@@ -90,7 +97,9 @@
       "Utilized advanced data collection equipment and techniques, including LiDAR and LCMS (Laser Crack Measurement System) to ensure high-quality data acquisition for various roadway projects.",
       "Developed a Python script for data quality assurance, validating Lidar-detected overhead lines against historical records to ensure accuracy."
     ],
-    "associatedPrograms": ["Python"],
+    "associatedPrograms": [
+      "Python"
+    ],
     "isVolunteer": false
   },
   {
@@ -101,10 +110,10 @@
     "end": null,
     "location": "Edmonton, AB",
     "tasks": [
-      "Designed, developed, and tested embedded firmware for six ESP32-based controllers in a smart HVAC system, enabling heating and cooling control via I2C, MODBUS, and PWM protocols.",
-      "Led the development of a large-scale Flutter application using BLoC architecture and Cloud Firestore integration to monitor and update HVAC controller data (temperature, status, settings) in real time.",
-      "Designed, routed, and tested a high-power, 4-layer PCB featuring 24VAC, I2C, and MODBUS inputs, integrated touchscreen, multiple 110VAC relays, and a 10V PWM output; designed using EasyEDA. ",
-      "Developed a Wi-Fi mesh network to enable efficient device communication, improving scalability and reliability of smart HVAC systems."
+      "Designed, routed, and tested a high-power, 4-layer PCB featuring 24VAC, I2C, and MODBUS inputs, integrated touchscreen, multiple 110VAC relays, and a 10V PWM output; designed using EasyEDA.",
+      "Redesigned and optimized ESP32‑based PCBs across multiple projects, including a low‑power ceremonial bugle with dual TAS‑series amplifiers, integrated Li‑ion charging, battery‑level sensing, power‑latch management, and SDIO micro‑SD input for audio playback.",
+      "Designed, developed, and tested embedded firmware for six ESP32-based controllers in a smart HVAC system, enabling heating and cooling control via BLE, I2C, MODBUS, and PWM protocols.",
+      "Led the development of a large-scale Flutter application using BLoC architecture and Supabase integration to monitor and update HVAC controller data (temperature, status, settings) in real time."
     ],
     "associatedPrograms": [
       "C++",

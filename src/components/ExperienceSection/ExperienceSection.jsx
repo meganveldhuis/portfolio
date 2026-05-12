@@ -5,7 +5,7 @@ import JobDescription from "../JobDescription/JobDescription";
 
 function ExperienceSection() {
   const sortedJobs = [...jobs].sort(
-    (a, b) => new Date(b.start) - new Date(a.start)
+    (a, b) => new Date(b.start) - new Date(a.start),
   );
 
   const [selectedCompanyID, setSelectedCompanyID] = useState(sortedJobs[0].id);
@@ -20,7 +20,7 @@ function ExperienceSection() {
 
   return (
     <section className="experience" id="work">
-      <h2 className="experience__header">WORK EXPERIENCE</h2>
+      <h2 className="experience__header">Work Experience</h2>
       <div className="experience__content">
         <select
           className="experience__select"
@@ -64,7 +64,7 @@ function ExperienceSection() {
         <div className="experience__job">
           <JobDescription
             selectedCompany={sortedJobs.find(
-              (job) => job.id == selectedCompanyID
+              (job) => job.id == selectedCompanyID,
             )}
           />
         </div>
