@@ -99,10 +99,10 @@ function ContactPage() {
             <br />
             <em>connect.</em>
           </h1>
-          <p className="contact-page__subtitle">
+          {/* <p className="contact-page__subtitle">
             Whether it's a job opportunity, a collaboration, or just a hello, my
             inbox is always open.
-          </p>
+          </p> */}
         </div>
 
         {/* Large decorative index number */}

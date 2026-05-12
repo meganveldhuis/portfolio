@@ -122,42 +122,34 @@
   },
   {
     "id": 6,
-    "title": "ClimaFi Smart HVAC System",
+    "title": "ClimaFi Smart Heat Pump Controller",
     "position": "Firmware, Hardware, Software Engineer",
-    "bio": "",
-    "description": ".",
+    "bio": "A smart HVAC System with Flutter app-controlled configuration and Supabase integration. The Heat Pump Controller connects to the database, has a control system, is automatically updated via OTA, and communicates to a commercial heatpump via Modbus.",
+    "description": "One of the biggest projects I am working on at HK Technologies. The system is a smart HVAC Control System for buildings, currently developing the Heat Pump Controller (HPC) for production, with more smart controllers in development. The HPC has 24VAC power inputs, nine 120VAC tolerant switch relays, a PWM output, a touch-screen, and two ports used for Modbus communication to a commercial heatpump. I wore a few hats for this project. As a hardware engineer, I redesigned, routed, and chose parts for the newer version of the PCB using EasyEDA, then tested each component with an oscilloscope, multimeter, and mock Modbus device. As a firmware engineer, I wrote code to control the components, connect to WiFi, display settings and current states, and connect to the Supabase database to pull configuration changes and post data synchronously. I used Object Oriented Programming combined with I2C, I2S, RS485 Modbus, and USB to control the inputs and outputs in this project. As a software engineer,I wrote a Flutter mobile app for users to control and monitor their Heat Pump Controller. The app uses BLoC architecture, and authenticates and connects with Supabase to read and write data and communicate with the device.",
     "link": "",
     "context": "Project at HK Tech",
     "startDate": "",
     "endDate": "",
+    "img": "/images/hk-climafi/physical-board.jpg",
+    "photos": [
+      "/images/hk-climafi/pcblayout.png",
+      "/images/hk-climafi/app_screenshot1.PNG",
+      "/images/hk-climafi/app_screenshot3.PNG"
+    ],
     "techStack": [
       "EasyEDA",
       "C++",
       "ESP32",
-      "Flutter"
+      "Flutter",
+      "IOT",
+      "I2C",
+      "I2S",
+      "Modbus"
     ],
     "challenges": [
-      "Fast-paced development of a product-level project"
-    ]
-  },
-  {
-    "id": 7,
-    "title": "Black Cat ",
-    "position": "Firmware, Hardware, Software Engineer",
-    "bio": "",
-    "description": ".",
-    "link": "",
-    "context": "Project at HK Tech",
-    "startDate": "",
-    "endDate": "",
-    "techStack": [
-      "EasyEDA",
-      "C++",
-      "ESP32",
-      "Flutter"
-    ],
-    "challenges": [
-      "Fast-paced development of a product-level project"
+      "Developing in a fast-paced environment for the development of a product-level project",
+      "Without a physical heatpump, I wrote a mock device based on the datasheet of the heatpump in order to test the modbus worked. This was challenging because the datasheet wasn't very clear.",
+      "Heap needed to be a constant consideration on this project, as tasks like posting temperature data to the database or the OTAs required a lot of processing power"
     ]
   }
 ]

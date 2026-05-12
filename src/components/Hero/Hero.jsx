@@ -31,6 +31,11 @@ function Hero() {
           <span>driven to meet deadlines</span> and to{" "}
           <span>produce high-quality work</span>.
         </p>
+        <p className="hero__text hero__subtitle">
+          Outside of work, you can find me in the mountains, hiking, rock
+          climbing, or taking photos. I also enjoy concert photography, playing
+          ringette, and crocheting.
+        </p>
       </div>
       <div className="hero__contact">
         <a
